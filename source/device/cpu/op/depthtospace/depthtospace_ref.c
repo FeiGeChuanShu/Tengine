@@ -66,15 +66,15 @@ int ref_depthtospace_fp32(struct tensor* input_tensor, struct tensor* output_ten
                     const int offset_w = w % block_size;
                     int offset_d = 0;
                     int in_d = 0;
-                    
-                    if (mode == 0)//CRD
+
+                    if (mode == 0) //CRD
                     {
                         offset_d = offset_h * block_size + offset_w;
-                        in_d = s * (block_size * block_size) + offset_d;                        
+                        in_d = s * (block_size * block_size) + offset_d;
                     }
-                    else//DCR
-                    {                   
-                        offset_d =(offset_h * block_size + offset_w) * outc;
+                    else //DCR
+                    {
+                        offset_d = (offset_h * block_size + offset_w) * outc;
                         in_d = s + offset_d;
                     }
                     const int o_index = ((b * outc + s) * outh + h) * outw + w;
@@ -118,15 +118,15 @@ int ref_depthtospace_uint8(struct tensor* input_tensor, struct tensor* output_te
                     const int offset_w = w % block_size;
                     int offset_d = 0;
                     int in_d = 0;
-                    
-                    if (mode == 0)//CRD
+
+                    if (mode == 0) //CRD
                     {
                         offset_d = offset_h * block_size + offset_w;
-                        in_d = s * (block_size * block_size) + offset_d;                        
+                        in_d = s * (block_size * block_size) + offset_d;
                     }
-                    else//DCR
-                    {                   
-                        offset_d =(offset_h * block_size + offset_w) * outc;
+                    else //DCR
+                    {
+                        offset_d = (offset_h * block_size + offset_w) * outc;
                         in_d = s + offset_d;
                     }
                     const int o_index = ((b * outc + s) * outh + h) * outw + w;
@@ -170,15 +170,15 @@ int ref_depthtospace_int8(struct tensor* input_tensor, struct tensor* output_ten
                     const int offset_w = w % block_size;
                     int offset_d = 0;
                     int in_d = 0;
-                    
-                    if (mode == 0)//CRD
+
+                    if (mode == 0) //CRD
                     {
                         offset_d = offset_h * block_size + offset_w;
-                        in_d = s * (block_size * block_size) + offset_d;                        
+                        in_d = s * (block_size * block_size) + offset_d;
                     }
-                    else//DCR
-                    {                   
-                        offset_d =(offset_h * block_size + offset_w) * outc;
+                    else //DCR
+                    {
+                        offset_d = (offset_h * block_size + offset_w) * outc;
                         in_d = s + offset_d;
                     }
                     const int o_index = ((b * outc + s) * outh + h) * outw + w;
