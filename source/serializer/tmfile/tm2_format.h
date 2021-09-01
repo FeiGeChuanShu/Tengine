@@ -939,6 +939,7 @@ typedef struct
 typedef struct
 {
     int block_size;
+    int mode;
 } TM2_DepthToSpaceParam;
 
 typedef struct

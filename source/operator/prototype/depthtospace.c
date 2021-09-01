@@ -65,7 +65,8 @@ static int init_op(struct op* op)
 
     /*set the param default value */
     depthtospace_param->block_size = 1;
-
+    depthtospace_param->mode = 0;
+    
     op->param_mem = depthtospace_param;
     op->param_size = sizeof(struct depthtospace_param);
     op->same_shape = 0;

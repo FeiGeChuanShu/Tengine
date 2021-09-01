@@ -1226,6 +1226,7 @@ tm_uoffset_t SaveTmDepthToSpaceOp(void* const start_ptr, tm_uoffset_t* cur_pos, 
     TM2_DepthToSpaceParam tm_param;
 
     tm_param.block_size = p->block_size;
+    tm_param.mode = p->mode;
 
     TM2_Operator tm_op;
     SetTmOperator(&tm_op, TM2_OPTYPE_DEPTHTOSPACE, WriteTmObject(start_ptr, cur_pos, &tm_param, sizeof(TM2_DepthToSpaceParam)));

@@ -48,6 +48,7 @@ static int tm2_load_depthtospace(struct graph* ir_graph, struct node* ir_node, c
     const TM2_DepthToSpaceParam* tm_param = (TM2_DepthToSpaceParam*)(mem_base + tm_op->offset_t_param);
 
     depthtospace_param->block_size = tm_param->block_size;
+    depthtospace_param->mode = tm_param->mode;
 
     return 0;
 }
