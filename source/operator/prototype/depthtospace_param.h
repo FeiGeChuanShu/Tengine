@@ -28,6 +28,7 @@
 struct depthtospace_param
 {
     int block_size;
+    int mode;
 };
 
 #endif
