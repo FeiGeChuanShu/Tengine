@@ -2098,8 +2098,8 @@ static int load_cast(ir_graph_t* graph, ir_node_t* node, const onnx::NodeProto& 
 static int load_depth_to_space(ir_graph_t* graph, ir_node_t* node, const onnx::NodeProto& onnx_node)
 {
     struct depthtospace_param* depthtospace_param = (struct depthtospace_param*)node->op.param_mem;
-    
-    int mode = 0;//CRD
+
+    int mode = 0; //CRD
     for (int k = 0; k < onnx_node.attribute_size(); k++)
     {
         const onnx::AttributeProto& attr = onnx_node.attribute(k);
@@ -2114,7 +2114,7 @@ static int load_depth_to_space(ir_graph_t* graph, ir_node_t* node, const onnx::N
         }
     }
     depthtospace_param->mode = mode;
-    
+
     return 0;
 }
 
